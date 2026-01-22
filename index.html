@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATEDD | Stop Studying Hard, Start Studying Smart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'atedd-gold': '#D4AF37',
+                        'atedd-gold-dark': '#B8860B',
+                        'atedd-bg': '#050505',
+                        'atedd-card': '#111111',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-15px)' },
+                        },
+                        glow: {
+                            '0%, 100%': { filter: 'drop-shadow(0 0 5px rgba(212, 175, 55, 0.3))' },
+                            '50%': { filter: 'drop-shadow(0 0 15px rgba(212, 175, 55, 0.6))' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #050505;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(to right, #D4AF37, #F5E0A3, #B8860B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-glow {
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+        }
+
+        .glass-panel {
+            background: rgba(20, 20, 20, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 10px; }
+
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Background Elements -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-atedd-gold/5 blur-[120px] rounded-full"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-atedd-gold/5 blur-[120px] rounded-full"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="relative z-10 flex justify-between items-center p-6 md:px-12">
+        <div class="flex items-center space-x-3">
+            <!-- ATEDD Premium SVG Logo -->
+            <div class="w-12 h-12 animate-float animate-glow">
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Main Outer Triangle A -->
+                    <path d="M15 90 L50 10 L85 90" stroke="#D4AF37" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <!-- Inner Bridge Triangle -->
+                    <path d="M30 90 L50 45 L70 90" stroke="#D4AF37" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <!-- Top Connection Bar -->
+                    <line x1="12" y1="28" x2="88" y2="28" stroke="#D4AF37" stroke-width="5" stroke-linecap="round"/>
+                    <!-- Bottom White Accent Swoosh -->
+                    <path d="M18 85 C 30 102, 70 102, 82 85" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round"/>
+                    <!-- Connection Nodes -->
+                    <circle cx="18" cy="85" r="3.5" fill="#D4AF37"/>
+                    <circle cx="82" cy="85" r="3.5" fill="#D4AF37"/>
+                </svg>
+            </div>
+            <span class="text-2xl font-bold tracking-tighter text-white">ATEDD <span class="text-atedd-gold">AI</span></span>
+        </div>
+        <div class="flex items-center space-x-2 bg-atedd-gold/10 px-4 py-2 rounded-full border border-atedd-gold/20">
+            <span class="text-[10px] md:text-xs text-atedd-gold font-bold uppercase tracking-widest">Coming Soon</span>
+            <div class="h-1.5 w-1.5 rounded-full bg-atedd-gold animate-pulse"></div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="relative z-10 flex flex-col items-center justify-center min-h-[85vh] text-center px-6">
+        
+        <div class="animate-fade-in" style="animation-delay: 0.2s;">
+            <span class="px-4 py-1.5 rounded-full border border-atedd-gold/30 bg-atedd-gold/10 text-atedd-gold text-xs font-bold uppercase tracking-[0.2em] mb-6 inline-block">
+                The Future of Learning is Here
+            </span>
+            <h1 class="text-5xl md:text-8xl font-extrabold mb-6 leading-tight tracking-tight">
+                Unlock Your <br>
+                <span class="gold-gradient-text">True Potential.</span>
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+                The AI-first digital ecosystem built specifically for the modern Indian students. <br class="hidden md:block">
+                <span class="text-white font-medium">Stop Studying Hard. Start Studying Smart.</span>
+            </p>
+        </div>
+
+        <!-- Coming Soon Label -->
+        <div class="mb-12 animate-fade-in" style="animation-delay: 0.4s;">
+            <div class="glass-panel px-8 py-4 rounded-2xl inline-flex items-center space-x-4">
+                <span class="text-xl md:text-2xl font-bold tracking-[0.3em] uppercase text-white/90">Coming Soon</span>
+                <div class="h-2 w-2 rounded-full bg-atedd-gold animate-ping"></div>
+            </div>
+        </div>
+
+        <!-- Waitlist Signup Form -->
+        <div class="w-full max-w-md animate-fade-in" style="animation-delay: 0.6s;">
+            <form id="waitlistForm" class="relative group">
+                <input 
+                    type="email" 
+                    id="emailInput"
+                    required
+                    placeholder="Enter your college email" 
+                    class="w-full bg-atedd-card border border-white/10 rounded-full py-5 px-8 pr-36 focus:outline-none focus:border-atedd-gold/50 transition-all text-white placeholder:text-gray-600 gold-glow"
+                >
+                <button 
+                    type="submit"
+                    class="absolute right-2 top-2 bottom-2 px-6 rounded-full bg-atedd-gold text-black font-bold text-sm hover:bg-white transition-all transform active:scale-95"
+                >
+                    Join Waitlist
+                </button>
+            </form>
+            <p id="formStatus" class="mt-4 text-sm text-gray-500 min-h-[1.25rem]"></p>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 py-12 px-6 text-center border-t border-white/5 mt-12">
+        <div class="flex justify-center space-x-8 mb-6">
+            <a href="#" class="text-gray-500 hover:text-atedd-gold transition-colors">Vision</a>
+            <a href="#" class="text-gray-500 hover:text-atedd-gold transition-colors">Team</a>
+            <a href="#" class="text-gray-500 hover:text-atedd-gold transition-colors">Contact</a>
+        </div>
+        <p class="text-xs text-gray-600 uppercase tracking-widest">
+            © 2025 ATEDD AI. Developed at CMR Institute of Technology by <span class="text-atedd-gold">Ahmed</span>.
+        </p>
+    </footer>
+
+    <script>
+        // Form Submission Logic
+        const form = document.getElementById('waitlistForm');
+        const status = document.getElementById('formStatus');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('emailInput').value;
+            
+            // Mock submission
+            status.innerText = "Processing...";
+            status.classList.remove('text-green-500', 'text-gray-500', 'text-red-500');
+            
+            setTimeout(() => {
+                status.innerText = "Welcome to the future, Innovator! Check your inbox soon.";
+                status.classList.add('text-green-500');
+                document.getElementById('emailInput').value = "";
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
