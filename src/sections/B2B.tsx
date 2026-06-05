@@ -34,12 +34,6 @@ const b2bCards = [
   },
 ];
 
-const stats = [
-  { value: '2,000+', label: 'Students' },
-  { value: '\u20B940L', label: 'ARR at 2 colleges' },
-  { value: 'DPDPA', label: 'Compliant' },
-  { value: 'AWS', label: 'Mumbai' },
-];
 
 const B2B: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
